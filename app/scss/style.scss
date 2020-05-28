@@ -180,8 +180,8 @@ h1, h2, h3, h4, h5, h6, figure {
 	background-size: cover;
 	background-attachment: fixed;
 	position: relative;
-	height: 600px;
-	width: 100%;
+	// height: 600px;
+	// width: 100%;
 	.overlay{
 		position: absolute;
 		top: 0;
@@ -197,7 +197,7 @@ h1, h2, h3, h4, h5, h6, figure {
 	.display-tc {
 		display: table-cell;
 		vertical-align: middle;
-		height: 600px;
+		// height: 600px;
 		h1, h2, h3 {
 			margin: 0;
 			padding: 0;
@@ -265,8 +265,6 @@ h1, h2, h3, h4, h5, h6, figure {
 			font-size: 16px;
 			@media screen and (max-width: $screen-sm) {
 				font-size: 14px;
-			}
-			span{
 			}
 		}
 		.profile-thumb{
@@ -357,7 +355,7 @@ h1, h2, h3, h4, h5, h6, figure {
 #fh5co-pricing,
 #fh5co-contact{
 	padding: 7em 0;
-	clear: both;
+	// clear: both;
 	@media screen and (max-width: $screen-sm) {
 		padding: 3em 0;
 	}
@@ -368,7 +366,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 .fh5co-bg-color{
 	// background: #233142;
-
+	background-color: transparent;
 }
 .fh5co-bg-dark{
 	background: $brand-bg-dark;
@@ -400,7 +398,7 @@ h1, h2, h3, h4, h5, h6, figure {
 		.first-block{
 			width: 40%;
 			display: inline-block;
-			float: left;
+			// float: left;
 			color: $brand-black;
 			font-weight: bold;
 		}
@@ -675,7 +673,7 @@ h1, h2, h3, h4, h5, h6, figure {
 
 //PROGRESS
 .progress-wrap{
-	width: 100%;
+	// width: 100%;
 	float: left;
 	margin-bottom: 10px;
 	h3{
@@ -695,12 +693,13 @@ h1, h2, h3, h4, h5, h6, figure {
 .progress{
 	width: 100%;
 	float: left;
-	height: 5px;
+	height: 12px;
 	box-shadow: none;
+	margin: 4px 0;
 }
 .progress-bar{
 	background-color: $brand-bg-dark;
-	height: 5px;
+	height: 12px;
 	display: block;
 	box-shadow: none;
 	&.progress-bar-gulp{
@@ -815,14 +814,16 @@ h1, h2, h3, h4, h5, h6, figure {
 
 // Buttons
 .btn {
-	margin-right: 4px;
-	margin-bottom: 4px;
-	font-family: $font-primary;
-	font-size: 16px;
-	font-weight: 400;
-	@include border-radius(30px);
+	// margin-right: 4px;
+	// margin-bottom: 4px;
+	// font-family: $font-primary;
+	// font-size: 16px;
+	// font-weight: 400;
+	// @include border-radius(30px);
 	@include transition(.5s);
-	padding: 8px 20px;
+	border-color: #00818a;
+	// background-color: rgba($brand-primary,.3);
+	// padding: 8px 20px;
 	&.btn-md {
 		padding: 8px 20px!important;
 	}
@@ -957,6 +958,13 @@ h1, h2, h3, h4, h5, h6, figure {
 		}
 	}
 }
+
+.btn-margin {
+	margin: 10px -5px;
+	.btn {
+		margin: 5px;
+	}
+}
 // Form Input Field
 .form-control {
 	box-shadow: none;
@@ -973,10 +981,10 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 
 .row-pb-md {
-	padding-bottom: 4em!important;
+	padding-bottom: 2em!important;
 }
 .row-pb-sm {
-	padding-bottom: 2em!important;
+	padding-bottom: 1em!important;
 }
 
 .nopadding {
@@ -1003,3 +1011,33 @@ h1, h2, h3, h4, h5, h6, figure {
 		opacity: 0;
 	}
 }
+
+/*
+ * Sidebar
+ */
+
+/* Hide for mobile, show later */
+.sidebar {
+	/* display: none; */
+	top: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1000;
+	display: block;
+	overflow-x: hidden;
+	overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+	background-color: #f5f5f5;
+  }
+  @media (min-width: 768px) {
+	.sidebar {
+	  position: fixed;
+	  /* top: 0;
+	  bottom: 0;
+	  left: 0;
+	  z-index: 1000;
+	  display: block;
+	  overflow-x: hidden;
+	  overflow-y: auto;
+	  background-color: #f5f5f5; */
+	}
+  }
